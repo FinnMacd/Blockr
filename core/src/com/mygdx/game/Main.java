@@ -52,6 +52,11 @@ public class Main extends ApplicationAdapter implements Runnable{
 
 	@Override
 	public void dispose () {
+		try {
+			gameThread.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		batch.dispose();
 	}
 

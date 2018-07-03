@@ -18,9 +18,9 @@ public class Inputs extends InputAdapter {
             this.pointer = pointer;
             timer = System.currentTimeMillis();
             tapped = false;
-            pressed = false;
+            pressed = true;
         }
-
+        //System.out.println(x + " " + y);
         return true;
 
     }
@@ -36,7 +36,7 @@ public class Inputs extends InputAdapter {
 
     }
 
-    public boolean touchUp(int screenX, int screenY, int pointer){
+    public boolean touchUp(int screenX, int screenY, int pointer, int button){
 
         if(this.pointer == pointer){
             this.pointer = -1;
